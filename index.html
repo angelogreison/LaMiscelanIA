@@ -1,0 +1,1873 @@
+<!doctype html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La MiscelanIA · Todo conectado para vender mejor</title>
+  <meta name="description"
+    content="Ayudamos a negocios locales de México a contestar por WhatsApp a cualquier hora, tener a sus clientes ordenados y no olvidar a nadie que preguntó.">
+  <!--
+  DESTINO DE CONTACTO
+  Todos los botones de contacto apuntan a https://wa.me/52XXXXXXXXXX
+  Para cambiarlo: busca y reemplaza "52XXXXXXXXXX" por tu número
+  (52 + 10 dígitos, sin espacios ni signos).
+-->
+  <link rel="icon" type="image/svg+xml" href="assets/xolo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700..800&family=Caveat:wght@700&family=Figtree:wght@400;500;600;700&display=swap">
+  <style>
+    :root {
+      --azul: #03305B;
+      --rosa: #EC1B62;
+      --rosa-p: #C8104F;
+      --turq: #0B9FA5;
+      --turq-t: #08757A;
+      --amarillo: #FFB129;
+      --naranja: #FF6511;
+      --crema: #FBF8F3;
+      --texto: #1F2A3A;
+      --suave: #5B6576;
+      --linea: #E4DDD2;
+      --f-rosa: #FDE7EF;
+      --f-turq: #E2F3F3;
+      --f-amar: #FFF3DB;
+      --f-azul: #E7EDF4;
+      --titular: 'Bricolage Grotesque', Arial, sans-serif;
+      --mano: Caveat, 'Comic Sans MS', cursive;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--crema);
+      color: var(--texto);
+      font-family: Figtree, Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 26px;
+      overflow-x: hidden
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block
+    }
+
+    a {
+      color: var(--rosa-p)
+    }
+
+    a:hover {
+      color: var(--azul)
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--azul);
+      outline-offset: 3px
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--titular);
+      font-weight: 800;
+      color: var(--azul);
+      margin: 0
+    }
+
+    p {
+      margin: 0
+    }
+
+    section {
+      scroll-margin-top: 16px
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding-left: 20px;
+      padding-right: 20px
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: var(--rosa-p)
+    }
+
+    .eyebrow--turq {
+      color: var(--turq-t)
+    }
+
+    .h2 {
+      margin-top: 10px;
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -.02em
+    }
+
+    .center {
+      text-align: center
+    }
+
+    .mano {
+      font-family: var(--mano);
+      font-weight: 700
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-weight: 700;
+      text-decoration: none;
+      text-align: center;
+      border: 2px solid transparent;
+      transition: transform .2s, filter .2s
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05)
+    }
+
+    .btn--rosa {
+      background: var(--rosa-p);
+      color: #fff
+    }
+
+    .btn--rosa:hover {
+      color: #fff
+    }
+
+    .btn--contorno {
+      border-color: var(--azul);
+      color: var(--azul);
+      background: transparent
+    }
+
+    .btn--contorno:hover {
+      color: var(--azul)
+    }
+
+    .btn--amarillo {
+      background: var(--amarillo);
+      color: var(--azul)
+    }
+
+    .btn--amarillo:hover {
+      color: var(--azul)
+    }
+
+    .btn--turq {
+      background: var(--turq-t);
+      color: #fff
+    }
+
+    .btn--turq:hover {
+      color: #fff
+    }
+
+    .btn--azul {
+      background: var(--azul);
+      color: #fff
+    }
+
+    .btn--azul:hover {
+      color: #fff
+    }
+
+    .btn--blanco {
+      background: #fff;
+      color: var(--azul)
+    }
+
+    .btn--blanco:hover {
+      color: var(--azul)
+    }
+
+    .btn--block {
+      display: flex;
+      width: 100%
+    }
+
+    .btn--small {
+      min-height: 44px;
+      padding: 10px 20px;
+      font-size: 15px
+    }
+
+    /* 0. Aviso */
+    .aviso {
+      background: var(--azul);
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      line-height: 22px;
+      font-weight: 600
+    }
+
+    /* 1. Encabezado */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-top: 14px;
+      padding-bottom: 14px
+    }
+
+    .header__logo img {
+      height: 46px;
+      width: auto
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 4px 28px
+    }
+
+    .nav__links {
+      display: none
+    }
+
+    .nav__links a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 12px 0;
+      border-bottom: 3px solid transparent
+    }
+
+    .nav__links a[aria-current] {
+      border-bottom-color: var(--rosa)
+    }
+
+    .nav .btn {
+      font-size: 14px;
+      padding: 10px 16px
+    }
+
+    /* 2. Hero */
+    .hero {
+      position: relative;
+      display: grid;
+      gap: 44px;
+      align-items: center;
+      padding-top: 28px;
+      padding-bottom: 56px
+    }
+
+    .chip {
+      display: inline-block;
+      background: var(--f-rosa);
+      color: var(--rosa-p);
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      padding: 7px 16px;
+      border-radius: 999px
+    }
+
+    .hero h1 {
+      margin-top: 20px;
+      font-size: clamp(40px, 11vw, 78px);
+      line-height: .98;
+      letter-spacing: -.025em
+    }
+
+    .hero h1 span {
+      color: var(--rosa)
+    }
+
+    .hero__texto {
+      margin-top: 22px;
+      font-size: 19px;
+      line-height: 30px;
+      font-weight: 500;
+      max-width: 540px
+    }
+
+    .hero__botones {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .nota-suave {
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--suave)
+    }
+
+    .ventajas {
+      list-style: none;
+      margin: 32px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 16px
+    }
+
+    .ventajas li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--azul)
+    }
+
+    .ico-circ {
+      flex: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center
+    }
+
+    .bg-amar {
+      background: var(--f-amar)
+    }
+
+    .bg-turq {
+      background: var(--f-turq)
+    }
+
+    .bg-rosa {
+      background: var(--f-rosa)
+    }
+
+    .foto {
+      position: relative;
+      padding: 12px 8px 28px 24px
+    }
+
+    .foto__salp {
+      position: absolute;
+      top: -8px;
+      left: -6px;
+      width: 80px;
+      z-index: 2
+    }
+
+    .foto__marco {
+      position: relative;
+      aspect-ratio: 4/5;
+      max-height: 640px;
+      border-radius: 36px;
+      overflow: hidden;
+      background: var(--f-turq);
+      border: 3px solid var(--azul);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 32px;
+      text-align: center
+    }
+
+    .foto__marco strong {
+      font-family: var(--titular);
+      font-weight: 800;
+      font-size: 22px;
+      line-height: 28px;
+      color: var(--azul)
+    }
+
+    .foto__marco span {
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--turq-t);
+      font-weight: 600
+    }
+
+    .foto__marco img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .foto__nota {
+      position: absolute;
+      top: 30px;
+      right: -4px;
+      z-index: 3;
+      background: var(--amarillo);
+      color: var(--azul);
+      padding: 10px 18px;
+      border-radius: 14px;
+      transform: rotate(4deg);
+      font-size: 26px;
+      line-height: 28px;
+      box-shadow: 0 6px 16px rgba(3, 48, 91, .18)
+    }
+
+    .foto__xolo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 104px;
+      z-index: 3;
+      filter: drop-shadow(0 6px 10px rgba(3, 48, 91, .15))
+    }
+
+    /* 3. Papel picado */
+    .picado {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      gap: 8px;
+      padding-bottom: 8px
+    }
+
+    .pf {
+      flex: none;
+      width: 76px;
+      height: 58px;
+      clip-path: polygon(0 0, 100% 0, 100% 84%, 87.5% 100%, 75% 84%, 62.5% 100%, 50% 84%, 37.5% 100%, 25% 84%, 12.5% 100%, 0 84%);
+      background-image: radial-gradient(circle at 50% 46%, #FBF8F3 0 9px, transparent 10px), radial-gradient(circle at 22% 24%, #FBF8F3 0 4px, transparent 5px), radial-gradient(circle at 78% 24%, #FBF8F3 0 4px, transparent 5px), radial-gradient(circle at 22% 66%, #FBF8F3 0 4px, transparent 5px), radial-gradient(circle at 78% 66%, #FBF8F3 0 4px, transparent 5px)
+    }
+
+    .pf:nth-child(5n+1) {
+      background-color: var(--rosa)
+    }
+
+    .pf:nth-child(5n+2) {
+      background-color: var(--amarillo)
+    }
+
+    .pf:nth-child(5n+3) {
+      background-color: var(--turq)
+    }
+
+    .pf:nth-child(5n+4) {
+      background-color: var(--naranja)
+    }
+
+    .pf:nth-child(5n+5) {
+      background-color: var(--azul)
+    }
+
+    /* 4. Problema */
+    .problema {
+      padding-top: 64px;
+      padding-bottom: 56px
+    }
+
+    .problema__top {
+      display: grid;
+      gap: 28px;
+      align-items: start
+    }
+
+    .problema .h2 {
+      max-width: 700px
+    }
+
+    .nota-amarilla {
+      background: var(--amarillo);
+      color: var(--azul);
+      padding: 16px 22px;
+      border-radius: 16px;
+      transform: rotate(-3deg);
+      font-size: 27px;
+      line-height: 30px;
+      max-width: 320px
+    }
+
+    .tarjetas {
+      margin-top: 40px;
+      display: grid;
+      gap: 16px
+    }
+
+    .tarjeta {
+      background: #fff;
+      border: 1px solid var(--linea);
+      border-radius: 20px;
+      padding: 22px 20px
+    }
+
+    .tarjeta p {
+      margin-top: 14px;
+      font-weight: 600;
+      color: var(--azul)
+    }
+
+    /* 5. Recorrido */
+    .recorrido {
+      background: var(--f-turq)
+    }
+
+    .recorrido .wrap {
+      padding-top: 64px;
+      padding-bottom: 64px
+    }
+
+    .recorrido .h2 {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: clamp(28px, 6vw, 46px)
+    }
+
+    .pasos {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px 16px
+    }
+
+    .paso {
+      text-align: center
+    }
+
+    .paso__circ {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin: 0 auto
+    }
+
+    .paso h3 {
+      margin: 16px 0 6px;
+      font-size: 16px;
+      line-height: 22px
+    }
+
+    .paso p {
+      font-size: 15px;
+      line-height: 22px
+    }
+
+    .recorrido__cierre {
+      margin-top: 44px;
+      text-align: center;
+      font-weight: 600;
+      color: var(--azul)
+    }
+
+    /* 6. Planes */
+    .planes {
+      padding-top: 80px;
+      padding-bottom: 24px
+    }
+
+    .planes__intro {
+      margin: 16px auto 0;
+      font-size: 18px;
+      line-height: 29px;
+      font-weight: 500;
+      max-width: 640px
+    }
+
+    .planes__grid {
+      margin-top: 48px;
+      display: grid;
+      gap: 20px
+    }
+
+    .plan {
+      border-radius: 28px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column
+    }
+
+    .plan__cab {
+      padding: 20px 14px
+    }
+
+    .plan__cab-fila {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .pastilla {
+      display: inline-block;
+      background: #fff;
+      color: var(--azul);
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 999px
+    }
+
+    .pastilla--amar {
+      background: var(--amarillo)
+    }
+
+    .plan h3 {
+      margin-top: 14px;
+      font-size: 36px;
+      line-height: 40px
+    }
+
+    .plan__panel {
+      background: #fff;
+      border-radius: 20px;
+      padding: 24px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1
+    }
+
+    .plan__desc {
+      font-weight: 500;
+      line-height: 24px
+    }
+
+    .plan__lista {
+      list-style: none;
+      margin: 20px 0 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1
+    }
+
+    .plan__lista li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start
+    }
+
+    .plan__lista svg {
+      flex: none;
+      margin-top: 3px
+    }
+
+    .precio {
+      margin-top: 24px;
+      border-top: 1px solid var(--linea);
+      padding-top: 18px
+    }
+
+    .precio__lbl {
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 600;
+      color: var(--suave)
+    }
+
+    .precio__fila {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap
+    }
+
+    .precio__grande {
+      font-family: var(--titular);
+      font-weight: 800;
+      font-size: 38px;
+      line-height: 42px;
+      color: var(--azul)
+    }
+
+    .precio__tachado {
+      font-size: 17px;
+      color: var(--suave);
+      text-decoration: line-through
+    }
+
+    .precio__lanz {
+      font-size: 13px;
+      line-height: 18px;
+      color: var(--rosa-p);
+      font-weight: 700
+    }
+
+    .precio__mes {
+      font-family: var(--titular);
+      font-weight: 800;
+      font-size: 26px;
+      line-height: 30px;
+      color: var(--azul)
+    }
+
+    .precio__extra {
+      color: var(--suave)
+    }
+
+    .precio__texto {
+      font-family: var(--titular);
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 30px;
+      color: var(--azul)
+    }
+
+    .plan .btn {
+      margin-top: 22px
+    }
+
+    .plan--orden {
+      background: var(--amarillo)
+    }
+
+    .plan--atencion {
+      background: var(--rosa-p)
+    }
+
+    .plan--atencion h3 {
+      color: #fff
+    }
+
+    .plan--todo {
+      background: var(--turq)
+    }
+
+    .plan--medida {
+      background: var(--f-azul)
+    }
+
+    .extras {
+      margin-top: 28px;
+      background: var(--f-amar);
+      border-radius: 20px;
+      padding: 22px 24px
+    }
+
+    .extras p:first-child {
+      color: var(--azul);
+      font-weight: 600
+    }
+
+    .extras p+p {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--suave)
+    }
+
+    /* 7. Algo diferente */
+    .diferente {
+      margin-top: 64px;
+      background: var(--azul);
+      color: #fff
+    }
+
+    .diferente .wrap {
+      padding-top: 56px;
+      padding-bottom: 56px;
+      display: grid;
+      gap: 36px;
+      align-items: center
+    }
+
+    .diferente__xolo {
+      max-width: 150px;
+      margin: 0 auto
+    }
+
+    .diferente h2 {
+      color: #fff;
+      font-size: clamp(28px, 6vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -.02em
+    }
+
+    .diferente__sub {
+      margin-top: 10px;
+      font-family: var(--titular);
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: var(--amarillo)
+    }
+
+    .diferente__texto {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 28px;
+      color: var(--f-azul);
+      max-width: 520px
+    }
+
+    .diferente .btn {
+      margin-top: 26px
+    }
+
+    .puntos {
+      display: flex;
+      flex-direction: column;
+      gap: 22px
+    }
+
+    .punto {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start
+    }
+
+    .punto strong {
+      display: block;
+      color: #fff
+    }
+
+    .punto span {
+      color: var(--f-azul);
+      font-size: 15px;
+      line-height: 22px
+    }
+
+    /* 8. Así empezamos */
+    .empezamos {
+      padding-top: 80px;
+      padding-bottom: 40px
+    }
+
+    .empezamos .h2 {
+      font-size: clamp(28px, 6vw, 46px)
+    }
+
+    .etapas {
+      margin-top: 40px;
+      display: grid;
+      gap: 28px
+    }
+
+    .etapa {
+      border-top: 5px solid;
+      padding-top: 20px
+    }
+
+    .etapa__num {
+      font-family: var(--titular);
+      font-weight: 800;
+      font-size: 44px;
+      line-height: 46px;
+      color: var(--azul)
+    }
+
+    .etapa h3 {
+      margin: 8px 0;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 28px
+    }
+
+    /* 9. Historias */
+    .historias {
+      padding-top: 40px;
+      padding-bottom: 80px;
+      display: grid;
+      gap: 36px;
+      align-items: center
+    }
+
+    .historias .h2 {
+      font-size: clamp(28px, 6vw, 46px)
+    }
+
+    .historias__texto {
+      margin-top: 16px;
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 420px
+    }
+
+    .testimonio {
+      background: #fff;
+      border: 2px dashed var(--turq);
+      border-radius: 24px;
+      padding: 28px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center
+    }
+
+    .testimonio__foto {
+      flex: none;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: var(--f-turq);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+      color: var(--turq-t);
+      padding: 12px
+    }
+
+    .testimonio__foto {
+      object-fit: cover
+    }
+
+    .testimonio__cuerpo {
+      flex: 1 1 240px;
+      min-width: 0
+    }
+
+    .testimonio__cita {
+      margin: 8px 0 12px;
+      font-family: var(--titular);
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 29px;
+      color: var(--azul)
+    }
+
+    .testimonio__autor {
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--suave);
+      font-weight: 600
+    }
+
+    /* 10. Preguntas */
+    .preguntas {
+      background: #fff;
+      border-top: 1px solid var(--linea);
+      border-bottom: 1px solid var(--linea)
+    }
+
+    .preguntas .wrap {
+      padding-top: 72px;
+      padding-bottom: 72px;
+      display: grid;
+      gap: 40px;
+      align-items: start
+    }
+
+    .preguntas .h2 {
+      font-size: clamp(28px, 6vw, 46px)
+    }
+
+    .preguntas__nota {
+      margin-top: 20px;
+      font-size: 30px;
+      line-height: 32px;
+      color: var(--rosa-p);
+      transform: rotate(-3deg);
+      display: inline-block
+    }
+
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .faq details {
+      background: var(--crema);
+      border: 1px solid var(--linea);
+      border-radius: 14px;
+      padding: 0 22px
+    }
+
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 0;
+      min-height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 700;
+      color: var(--azul)
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none
+    }
+
+    .faq summary::after {
+      content: "+";
+      flex: none;
+      font-size: 26px;
+      line-height: 1;
+      color: var(--rosa-p);
+      transition: transform .2s
+    }
+
+    .faq details[open] summary::after {
+      transform: rotate(45deg)
+    }
+
+    .faq details p {
+      margin: 0 0 20px
+    }
+
+    /* 11. Cierre */
+    .cierre {
+      background: var(--rosa);
+      color: #fff;
+      overflow: hidden
+    }
+
+    .cierre .wrap {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      display: grid;
+      gap: 32px;
+      justify-items: center;
+      align-items: center
+    }
+
+    .cierre__xolo {
+      width: 140px
+    }
+
+    .cierre__salp {
+      width: 110px;
+      filter: brightness(0) invert(1)
+    }
+
+    .cierre__centro {
+      text-align: center;
+      max-width: 640px
+    }
+
+    .cierre h2 {
+      color: #fff;
+      font-size: clamp(32px, 7.5vw, 56px);
+      line-height: 1.04;
+      letter-spacing: -.02em
+    }
+
+    .cierre__texto {
+      margin-top: 16px;
+      font-size: 20px;
+      line-height: 29px;
+      font-weight: 700
+    }
+
+    .cierre__botones {
+      margin-top: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: stretch
+    }
+
+    .cierre__nota {
+      margin-top: 18px;
+      font-size: 19px;
+      line-height: 26px;
+      font-weight: 700
+    }
+
+    /* 12. Pie */
+    .pie .wrap {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: grid;
+      gap: 24px
+    }
+
+    .pie__logo img {
+      height: 52px;
+      width: auto
+    }
+
+    .pie nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 24px
+    }
+
+    .pie nav a {
+      color: var(--azul);
+      text-decoration: none;
+      font-weight: 600;
+      padding: 10px 0;
+      display: inline-block
+    }
+
+    .pie__datos {
+      font-size: 14px;
+      line-height: 22px
+    }
+
+    .pie__copy {
+      font-size: 14px;
+      line-height: 22px;
+      color: var(--suave)
+    }
+
+    /* ---------- Tablet ---------- */
+    @media (min-width:640px) {
+      .wrap {
+        padding-left: 32px;
+        padding-right: 32px
+      }
+
+      .hero__botones,
+      .cierre__botones {
+        flex-direction: row;
+        flex-wrap: wrap
+      }
+
+      .cierre__botones {
+        justify-content: center
+      }
+
+      .ventajas {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .tarjetas {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .pasos {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .planes__grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .etapas {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .header__logo img {
+        height: 56px
+      }
+
+      .nav .btn {
+        font-size: 16px;
+        padding: 12px 24px
+      }
+    }
+
+    /* ---------- Escritorio ---------- */
+    @media (min-width:980px) {
+      .nav__links {
+        display: flex;
+        gap: 28px
+      }
+
+      .hero {
+        grid-template-columns: 1.15fr .85fr;
+        gap: 56px;
+        padding-top: 40px;
+        padding-bottom: 72px
+      }
+
+      .foto {
+        padding: 12px 12px 28px 28px
+      }
+
+      .foto__salp {
+        width: 96px
+      }
+
+      .foto__nota {
+        font-size: 28px;
+        line-height: 30px;
+        padding: 12px 20px
+      }
+
+      .foto__xolo {
+        width: 132px
+      }
+
+      .problema__top {
+        grid-template-columns: 1fr auto
+      }
+
+      .tarjetas {
+        grid-template-columns: repeat(6, 1fr)
+      }
+
+      .pasos {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 20px
+      }
+
+      .diferente .wrap {
+        grid-template-columns: 200px 1fr 300px;
+        gap: 40px
+      }
+
+      .diferente__xolo {
+        max-width: 200px
+      }
+
+      .etapas {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px
+      }
+
+      .historias {
+        grid-template-columns: 1fr 1.4fr
+      }
+
+      .preguntas .wrap {
+        grid-template-columns: 1fr 1.6fr;
+        gap: 48px
+      }
+
+      .cierre .wrap {
+        grid-template-columns: 190px 1fr 150px;
+        gap: 40px
+      }
+
+      .cierre__xolo {
+        width: 190px
+      }
+
+      .cierre__salp {
+        width: 150px
+      }
+
+      .pie .wrap {
+        grid-template-columns: auto 1fr auto;
+        align-items: center
+      }
+
+      .pie nav {
+        justify-content: center
+      }
+
+      .pie__copy {
+        grid-column: 1/-1
+      }
+    }
+
+    @media (min-width:980px) {
+      .planes__grid {
+        grid-template-columns: repeat(3, 1fr)
+      }
+
+      .plan--medida {
+        grid-column: 1/-1
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      .btn {
+        transition: none
+      }
+
+      .btn:hover {
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 0. Aviso de lanzamiento -->
+  <div class="aviso">Precio de lanzamiento: 20% menos en la puesta en marcha para los 3 primeros negocios, hasta el 31
+    de enero de 2027.</div>
+
+  <!-- 1. Encabezado -->
+  <header class="wrap header">
+    <a class="header__logo" href="#inicio"><img src="assets/logo-horizontal.svg" alt="La MiscelanIA" width="180"
+        height="56"></a>
+    <nav class="nav" aria-label="Principal">
+      <div class="nav__links">
+        <a href="#inicio" aria-current="page">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#historias">Historias</a>
+        <a href="#preguntas">Preguntas</a>
+      </div>
+      <a class="btn btn--rosa" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Hablemos por
+        WhatsApp</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- 2. Hero -->
+    <section id="inicio" class="wrap hero">
+      <div>
+        <span class="chip">Todo conectado para vender mejor</span>
+        <h1>Contesta a tiempo. Da seguimiento. <span>Vende más.</span></h1>
+        <p class="hero__texto">Ayudamos a negocios como el tuyo a contestar por WhatsApp a cualquier hora, tener a sus
+          clientes ordenados y no olvidar a nadie que preguntó.</p>
+        <div class="hero__botones">
+          <a class="btn btn--rosa" href="#planes">Ver los planes</a>
+          <a class="btn btn--contorno" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Hablar por
+            WhatsApp</a>
+        </div>
+        <!-- CALENDARIO -->
+        <p class="nota-suave">La primera conversación es gratis y sin compromiso.</p>
+        <ul class="ventajas">
+          <li><span class="ico-circ bg-amar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="#03305B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
+              </svg></span>Te explicamos todo claro, sin palabras raras</li>
+          <li><span class="ico-circ bg-turq"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="#03305B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="m5 12 5 5 9-10" />
+              </svg></span>Empiezas solo con lo que necesitas</li>
+          <li><span class="ico-circ bg-rosa"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                stroke="#03305B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7.5 3c0 5.4-7.5 10-7.5 10Z" />
+              </svg></span>Te acompañamos cada mes</li>
+        </ul>
+      </div>
+
+      <div class="foto">
+        <img class="foto__salp" src="assets/salpicadura-1.svg" alt="" aria-hidden="true">
+        <div class="foto__marco">
+          <img src="assets/emprendedora.png" alt="Erika Vega, dueña de EV Banquetes y Eventos">
+        </div>
+        <div class="foto__nota mano">Lo local<br>también es grande</div>
+        <img class="foto__xolo" src="assets/xolo-verde.svg" alt="Xolo, el símbolo de La MiscelanIA" width="132"
+          height="132">
+      </div>
+    </section>
+
+    <!-- 3. Papel picado -->
+    <div class="picado" aria-hidden="true">
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+      <div class="pf"></div>
+    </div>
+
+    <!-- 4. ¿Te pasa esto? -->
+    <section class="wrap problema">
+      <div class="problema__top">
+        <div>
+          <span class="eyebrow">¿TE PASA ESTO?</span>
+          <h2 class="h2">Tu negocio ya recibe mensajes. Lo que falta es que ninguno se pierda.</h2>
+        </div>
+        <p class="nota-amarilla mano">No necesitas más herramientas. Necesitas que todo trabaje junto.</p>
+      </div>
+      <div class="tarjetas">
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C8104F"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+          <p>Te escriben, pero tardas en contestar.</p>
+        </div>
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#08757A"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 12 12 3h8v8l-9 9-8-8Z" />
+            <circle cx="16" cy="8" r="1.2" />
+          </svg>
+          <p>Pasas un precio y no vuelves a escribirle a esa persona.</p>
+        </div>
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C2410C"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+            <path d="m3 13 9 5 9-5" />
+          </svg>
+          <p>Tus clientes están repartidos entre chats, cuadernos y el celular.</p>
+        </div>
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C8104F"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3.5" y="5" width="17" height="15" rx="2.5" />
+            <path d="M3.5 10h17M8 3v4M16 3v4" />
+          </svg>
+          <p>Llevar las citas y los pendientes te quita tiempo.</p>
+        </div>
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#08757A"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 11a8 8 0 0 0-14-4.5L4 9" />
+            <path d="M4 4v5h5" />
+            <path d="M4 13a8 8 0 0 0 14 4.5L20 15" />
+            <path d="M20 20v-5h-5" />
+          </svg>
+          <p>Tienes clientes de antes a los que casi nunca les escribes.</p>
+        </div>
+        <div class="tarjeta"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#C2410C"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m12 3 2.7 5.8 6.3.8-4.6 4.4 1.2 6.3L12 17.3l-5.6 3 1.2-6.3L3 9.6l6.3-.8L12 3Z" />
+          </svg>
+          <p>Tus clientes quedan contentos, pero casi nadie deja su opinión.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Cómo funciona -->
+    <section id="como-funciona" class="recorrido">
+      <div class="wrap">
+        <div class="center">
+          <span class="eyebrow eyebrow--turq">CÓMO FUNCIONA LA MISCELANIA</span>
+          <h2 class="h2">Un recorrido simple, desde que te encuentran hasta que vuelven</h2>
+        </div>
+        <div class="pasos">
+          <div class="paso">
+            <div class="paso__circ" style="background:#C8104F"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+                <circle cx="12" cy="12" r="3" />
+              </svg></div>
+            <h3>TE ENCUENTRAN</h3>
+            <p>Con una buena página y apareciendo en Google.</p>
+          </div>
+          <div class="paso">
+            <div class="paso__circ" style="background:#08757A"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
+              </svg></div>
+            <h3>TE ESCRIBEN</h3>
+            <p>Por WhatsApp o redes, a cualquier hora.</p>
+          </div>
+          <div class="paso">
+            <div class="paso__circ" style="background:#FFB129"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#03305B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <circle cx="9" cy="8" r="3.5" />
+                <path d="M2.5 20c.5-3.6 3-5.5 6.5-5.5s6 1.9 6.5 5.5" />
+                <circle cx="17.5" cy="9" r="2.5" />
+                <path d="M17.5 14.2c2.4.1 4 1.6 4.3 4.3" />
+              </svg></div>
+            <h3>LOS ATIENDES</h3>
+            <p>Respuestas rápidas y todos tus clientes en un solo lugar.</p>
+          </div>
+          <div class="paso">
+            <div class="paso__circ" style="background:#FF6511"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#03305B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <rect x="3.5" y="5" width="17" height="15" rx="2.5" />
+                <path d="M3.5 10h17M8 3v4M16 3v4" />
+              </svg></div>
+            <h3>LES DAS SEGUIMIENTO</h3>
+            <p>Recordatorios para no olvidar a nadie que preguntó.</p>
+          </div>
+          <div class="paso">
+            <div class="paso__circ" style="background:#03305B"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M5 20v-7M12 20V5M19 20v-10" />
+              </svg></div>
+            <h3>TE COMPRAN</h3>
+            <p>Cotizas, cierras y sabes qué está funcionando.</p>
+          </div>
+          <div class="paso">
+            <div class="paso__circ" style="background:#C8104F"><svg width="34" height="34" viewBox="0 0 24 24"
+                fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M12 20s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7.5 3c0 5.4-7.5 10-7.5 10Z" />
+              </svg></div>
+            <h3>VUELVEN</h3>
+            <p>Los vuelves a contactar y les pides su opinión.</p>
+          </div>
+        </div>
+        <p class="recorrido__cierre">No tienes que contratarlo todo: cada plan cubre las partes que tu negocio necesita.
+        </p>
+      </div>
+    </section>
+
+    <!-- 6. Planes -->
+    <section id="planes" class="wrap planes">
+      <div class="center">
+        <span class="eyebrow">NUESTROS PLANES</span>
+        <h2 class="h2">Elige cómo quieres empezar</h2>
+        <p class="planes__intro">Tres formas de empezar, un mismo objetivo: que ninguna persona interesada se quede sin
+          respuesta.</p>
+      </div>
+
+      <div class="planes__grid">
+        <!-- Plan 1 · Orden -->
+        <article class="plan plan--orden">
+          <div class="plan__cab"><span class="pastilla">Plan 1</span>
+            <h3>Orden</h3>
+          </div>
+          <div class="plan__panel">
+            <p class="plan__desc">Para negocios que ya reciben consultas y se les olvidan los pendientes.</p>
+            <ul class="plan__lista">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Un solo lugar donde ves a todos tus clientes y sus conversaciones</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Recordatorios para volver a escribirle a quien pidió precio</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Mensajes que se envían solos: bienvenida, confirmación y recordatorio</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Te enseñamos a usarlo y te acompañamos cada mes</span></li>
+            </ul>
+            <div class="precio">
+              <div class="precio__lbl">Puesta en marcha (pago único)</div>
+              <div class="precio__fila"><span class="precio__grande">$24,300</span><span
+                  class="precio__tachado">$30,400</span></div>
+              <div class="precio__lanz">Precio de lanzamiento</div>
+              <div class="precio__lbl" style="margin-top:12px">Cada mes</div>
+              <div><span class="precio__mes">$9,600</span><span class="precio__extra"> al mes</span></div>
+            </div>
+            <a class="btn btn--amarillo btn--block" href="https://wa.me/52XXXXXXXXXX" target="_blank"
+              rel="noopener">Quiero empezar</a>
+          </div>
+        </article>
+
+        <!-- Plan 2 · Atención -->
+        <article class="plan plan--atencion">
+          <div class="plan__cab">
+            <div class="plan__cab-fila"><span class="pastilla">Plan 2</span><span
+                class="pastilla pastilla--amar">Recomendado</span></div>
+            <h3>Atención</h3>
+          </div>
+          <div class="plan__panel">
+            <p class="plan__desc">Para negocios con muchas consultas que quieren contestar rápido y llenar su agenda.
+            </p>
+            <ul class="plan__lista">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8104F" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Un asistente que contesta por WhatsApp a cualquier hora y te pasa los casos
+                  importantes</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8104F" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Tus clientes reservan su cita solos y reciben su confirmación</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8104F" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Todas las conversaciones ordenadas en un solo lugar</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8104F" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Pruebas, capacitación y acompañamiento cada mes</span></li>
+            </ul>
+            <div class="precio">
+              <div class="precio__lbl">Puesta en marcha (pago único)</div>
+              <div class="precio__fila"><span class="precio__grande">$48,400</span><span
+                  class="precio__tachado">$60,500</span></div>
+              <div class="precio__lanz">Precio de lanzamiento</div>
+              <div class="precio__lbl" style="margin-top:12px">Cada mes</div>
+              <div><span class="precio__mes">$6,900</span><span class="precio__extra"> al mes, más tus mensajes</span>
+              </div>
+            </div>
+            <a class="btn btn--rosa btn--block" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Quiero
+              atender mejor</a>
+          </div>
+        </article>
+
+        <!-- Plan 3 · Todo conectado -->
+        <article class="plan plan--todo">
+          <div class="plan__cab"><span class="pastilla">Plan 3</span>
+            <h3>Todo conectado</h3>
+          </div>
+          <div class="plan__panel">
+            <p class="plan__desc">Para negocios que quieren cuidar a sus clientes desde que escriben hasta que compran.
+            </p>
+            <ul class="plan__lista">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Todo lo del plan Atención</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Todo lo del plan Orden</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Un solo recorrido, desde que te escriben hasta que compran</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#08757A" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Capacitación y acompañamiento cada mes</span></li>
+            </ul>
+            <div class="precio">
+              <div class="precio__lbl">Puesta en marcha (pago único)</div>
+              <div class="precio__fila"><span class="precio__grande">$62,200</span><span
+                  class="precio__tachado">$77,700</span></div>
+              <div class="precio__lanz">Precio de lanzamiento</div>
+              <div class="precio__lbl" style="margin-top:12px">Cada mes</div>
+              <div><span class="precio__mes">$13,900</span><span class="precio__extra"> al mes, más tus mensajes</span>
+              </div>
+            </div>
+            <a class="btn btn--turq btn--block" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Quiero
+              todo conectado</a>
+          </div>
+        </article>
+
+        <!-- A tu medida -->
+        <article class="plan plan--medida">
+          <div class="plan__cab"><span class="pastilla">A tu manera</span>
+            <h3>A tu medida</h3>
+          </div>
+          <div class="plan__panel">
+            <p class="plan__desc">Tú nos cuentas qué necesitas y nosotros lo armamos contigo.</p>
+            <ul class="plan__lista">
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Eliges solo lo que necesitas</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Recibes una propuesta clara por escrito</span></li>
+              <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2.6"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="m5 12 5 5 9-10" />
+                </svg><span>Puedes sumar página web, anuncios o que te encuentren mejor en Google</span></li>
+            </ul>
+            <div class="precio">
+              <div class="precio__lbl">Precio</div>
+              <div class="precio__texto">Te lo decimos en la primera conversación</div>
+            </div>
+            <a class="btn btn--azul btn--block" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Armar
+              mi propio plan</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="extras">
+        <p>¿Necesitas también página web, anuncios o que te encuentren mejor en Google? Se suman a cualquier plan.</p>
+        <p>Precios en pesos mexicanos, sin IVA. «Tus mensajes» es lo que cuesta enviar y recibir conversaciones por
+          WhatsApp y usar el asistente: depende de cuántas tengas, y antes de empezar lo calculamos contigo y fijamos un
+          límite mensual. La inversión en anuncios y los servicios de terceros se cotizan aparte.</p>
+      </div>
+    </section>
+
+    <!-- 7. Algo diferente -->
+    <section class="diferente">
+      <div class="wrap">
+        <img class="diferente__xolo" src="assets/xolo-blanco.svg" alt="" aria-hidden="true" width="200" height="200">
+        <div>
+          <h2>¿Tu negocio necesita algo diferente?</h2>
+          <p class="diferente__sub">Armamos una solución a tu medida.</p>
+          <p class="diferente__texto">Cuéntanos qué pasa hoy en tu negocio y construimos contigo la combinación que de
+            verdad necesitas.</p>
+          <a class="btn btn--amarillo" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Hablar con
+            nosotros</a>
+        </div>
+        <div class="puntos">
+          <div class="punto"><span class="ico-circ" style="background:#0B9FA5"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z" />
+              </svg></span>
+            <div><strong>Te escuchamos</strong><span>Entendemos cómo trabajas hoy.</span></div>
+          </div>
+          <div class="punto"><span class="ico-circ" style="background:#FFB129"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="m12 3 9 5-9 5-9-5 9-5Z" />
+                <path d="m3 13 9 5 9-5" />
+              </svg></span>
+            <div><strong>Lo armamos contigo</strong><span>Solo con lo que realmente necesitas.</span></div>
+          </div>
+          <div class="punto"><span class="ico-circ" style="background:#FF6511"><svg width="22" height="22"
+                viewBox="0 0 24 24" fill="none" stroke="#03305B" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <path d="M12 20s-7.5-4.6-7.5-10A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7.5 3c0 5.4-7.5 10-7.5 10Z" />
+              </svg></span>
+            <div><strong>Te acompañamos</strong><span>Hasta que lo uses con confianza.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Así empezamos -->
+    <section class="wrap empezamos">
+      <div class="center">
+        <span class="eyebrow">ASÍ EMPEZAMOS</span>
+        <h2 class="h2">Cuatro pasos, sin letra pequeña</h2>
+      </div>
+      <div class="etapas">
+        <div class="etapa" style="border-color:#EC1B62">
+          <div class="etapa__num">01</div>
+          <h3>Platicamos</h3>
+          <p>Una conversación gratuita de 30 minutos para entender tu negocio y recomendarte por dónde empezar.</p>
+        </div>
+        <div class="etapa" style="border-color:#FFB129">
+          <div class="etapa__num">02</div>
+          <h3>Te damos una propuesta clara</h3>
+          <p>En 48 horas recibes por escrito qué incluye, cuánto cuesta y en cuánto tiempo.</p>
+        </div>
+        <div class="etapa" style="border-color:#0B9FA5">
+          <div class="etapa__num">03</div>
+          <h3>Lo dejamos funcionando</h3>
+          <p>Lo ponemos en marcha en entre 1 y 3 semanas, según el plan, desde que recibimos tus accesos y materiales.
+          </p>
+        </div>
+        <div class="etapa" style="border-color:#03305B">
+          <div class="etapa__num">04</div>
+          <h3>Te acompañamos</h3>
+          <p>Cada mes revisamos cómo va, ajustamos lo que haga falta y ayudamos a tu equipo a usarlo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Historias -->
+    <section id="historias" class="wrap historias">
+      <div>
+        <span class="eyebrow eyebrow--turq">HISTORIAS REALES</span>
+        <h2 class="h2">Negocios como el tuyo, contados por ellos</h2>
+        <p class="historias__texto">Sin cifras exageradas: aquí solo van opiniones reales de negocios que ya trabajan
+          con nosotros.</p>
+      </div>
+      <div class="testimonio">
+        <img class="testimonio__foto" src="assets/erika-vega.webp" alt="Erika Vega, dueña de EV Banquetes y Eventos"
+          width="120" height="120">
+        <div class="testimonio__cuerpo">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#EC1B62" aria-hidden="true">
+            <path
+              d="M4 18v-5.2C4 8.6 6.2 6 9.5 5.5l.4 1.9C8.3 7.9 7.5 9 7.4 10.5H10V18H4Zm10 0v-5.2c0-4.2 2.2-6.8 5.5-7.3l.4 1.9c-1.6.5-2.4 1.6-2.5 3.1H20V18h-6Z" />
+          </svg>
+          <p class="testimonio__cita">«Estoy muy contenta con el trabajo de La MiscelanIA. Me ayudaron muchísimo,
+            siempre con buena disposición y paciencia. ¡Los recomiendo con toda confianza!»</p>
+          <p class="testimonio__autor">Erika Vega · EV Banquetes y Eventos · Yucatán, México</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. Preguntas -->
+    <section id="preguntas" class="preguntas">
+      <div class="wrap">
+        <div>
+          <span class="eyebrow">PREGUNTAS FRECUENTES</span>
+          <h2 class="h2">¿Tienes dudas? Aquí van algunas respuestas.</h2>
+          <p class="preguntas__nota mano">¿Algo más? Escríbenos.</p>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Tengo que contratar todo?</summary>
+            <p>No. Empiezas por lo que necesitas y agregas más cuando tenga sentido. Si solo necesitas una parte, la
+              cotizamos por separado.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda en estar funcionando?</summary>
+            <p>Entre 1 y 3 semanas, según el plan, contando desde que recibimos tus accesos y materiales.</p>
+          </details>
+          <details>
+            <summary>Ya tengo página web o ya uso otra herramienta. ¿La cambio?</summary>
+            <p>No cambiamos nada por cambiar. Primero revisamos qué ya te funciona y trabajamos con eso.</p>
+          </details>
+          <details>
+            <summary>¿El asistente puede contestar todo solo?</summary>
+            <p>No siempre. Contesta lo que ya sabe, con respuestas que tú apruebas, y te pasa a ti los casos especiales.
+            </p>
+          </details>
+          <details>
+            <summary>¿Me garantizan más ventas?</summary>
+            <p>No sería honesto prometer una cantidad de ventas sin conocer tu negocio. Sí te decimos qué vamos a hacer,
+              qué vamos a medir y lo revisamos contigo cada mes.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto cuestan los mensajes?</summary>
+            <p>Depende de cuántas conversaciones tengas. Lo calculamos juntos antes de empezar y fijamos un límite
+              mensual, para que no haya sorpresas.</p>
+          </details>
+          <details>
+            <summary>¿En qué ciudades trabajan?</summary>
+            <p>En todo México, a distancia, por videollamada y WhatsApp.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Cierre -->
+    <section id="contacto" class="cierre">
+      <div class="wrap">
+        <img class="cierre__xolo" src="assets/xolo-blanco.svg" alt="" aria-hidden="true" width="190" height="190">
+        <div class="cierre__centro">
+          <h2>Tu negocio ya existe. Que ninguna consulta se pierda.</h2>
+          <p class="cierre__texto">Empieza con una conversación gratis de 30 minutos.</p>
+          <div class="cierre__botones">
+            <a class="btn btn--azul" href="https://wa.me/52XXXXXXXXXX" target="_blank" rel="noopener">Hablemos por
+              WhatsApp</a>
+            <a class="btn btn--blanco" href="#planes">Ver los planes</a>
+          </div>
+          <p class="cierre__nota">Primera conversación sin compromiso.</p>
+          <!-- FORMULARIO -->
+        </div>
+        <img class="cierre__salp" src="assets/salpicadura-2.svg" alt="" aria-hidden="true" width="150" height="150">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 12. Pie -->
+  <footer class="pie">
+    <div class="wrap">
+      <a class="pie__logo" href="#inicio"><img src="assets/logo-horizontal.svg" alt="La MiscelanIA" width="168"
+          height="52"></a>
+      <nav aria-label="Pie">
+        <a href="#inicio">Inicio</a>
+        <a href="#planes">Planes</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#historias">Historias</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="pie__datos">
+        <div>WhatsApp: [NÚMERO DE WHATSAPP]</div>
+        <div>Correo: [CORREO DE CONTACTO]</div>
+        <div>Atención: [HORARIO DE ATENCIÓN]</div>
+      </div>
+      <p class="pie__copy">© 2026 La MiscelanIA. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <!-- CHAT -->
+</body>
+
+</html>
